@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Nav = ({ cartData }) => {
+  const { wishList } = useSelector((state) => state.wishList);
+
   return (
     <>
       <nav className="navbar-sticky shadow-sm bg-body-tertiary">
@@ -33,15 +36,21 @@ const Nav = ({ cartData }) => {
                 <NavLink className="nav-item nav-link me-4" to="/products/all">
                   產品
                 </NavLink>
-                <NavLink className="nav-item nav-link me-4" to="/wishlist">
-                  願望清單
+                <NavLink
+                  className="nav-item nav-link me-4 position-relative"
+                  to="/wishlist"
+                >
+                  <i className="bi bi-bag-heart"></i>
+                  <span className="position-absolute top-3 start-11 start-md-100 translate-middle badge rounded-pill bg-danger icon-span">
+                    {wishList.length === 0 ? "" : wishList.length}
+                  </span>
                 </NavLink>
                 <NavLink
                   className="nav-item nav-link position-relative"
                   to="/cart"
                 >
                   <i className="bi bi-cart-fill"></i>
-                  <span className="position-absolute top-3 start-11 start-md-100 translate-middle badge rounded-pill bg-danger">
+                  <span className="position-absolute top-3 start-11 start-md-100 translate-middle badge rounded-pill bg-danger icon-span">
                     {cartData?.carts?.length === 0
                       ? ""
                       : cartData?.carts?.length}
