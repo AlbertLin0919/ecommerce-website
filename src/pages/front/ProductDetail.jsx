@@ -11,7 +11,7 @@ import { numberWithCommas } from "../../function/function";
 import Loading from "../../components/Loading";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Thumbs, Navigation, Autoplay } from "swiper";
+import { Thumbs, Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -341,11 +341,10 @@ const ProductDetail = () => {
             style={{
               "--swiper-navigation-size": "30px",
             }}
-            freeMode={true}
             autoplay={{ delay: 2500 }}
             navigation={true}
             loop={true}
-            modules={[FreeMode, Autoplay, Navigation]}
+            modules={[Autoplay, Navigation]}
             className="mySwiper"
             breakpoints={{
               0: {
