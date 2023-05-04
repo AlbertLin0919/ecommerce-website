@@ -59,12 +59,20 @@ const Checkout = () => {
     baseURL: "",
   });
 
+  const fetchCity = async () => {
+    const res = await fetch(process.env.PUBLIC_URL + "/TwCities.json");
+    const data = await res.json();
+    setAddressData(data);
+  };
+
   useEffect(() => {
-    (async () => {
-      const res = await twCity.get("/TwCities.json");
-      setAddressData(res.data);
-    })();
-  }, [twCity]);
+    // (async () => {
+    //   const res = await twCity.get("/TwCities.json");
+    //   setAddressData(res.data);
+    // })();
+    fetchCity();
+  }, []);
+
   return (
     <>
       <Loading isLoading={isLoading} />
