@@ -65,7 +65,7 @@ const Home = () => {
           }}
         >
           <img
-            src="/images/scrollDown.png"
+            src="https://o.remove.bg/downloads/6dffbd1a-1644-4515-b9ed-b1428574f2ae/scrollDown-removebg-preview.png"
             alt="scrollDown"
             className="scrollDown"
           />
