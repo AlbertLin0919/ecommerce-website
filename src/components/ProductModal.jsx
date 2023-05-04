@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   handleSuccessMessage,
   handleErrorMessage,
-} from "../store/Slice/messageSlice";
+} from "../store/AllSlice/messageSlice";
 
 const ProductModal = ({
   closeProductModal,

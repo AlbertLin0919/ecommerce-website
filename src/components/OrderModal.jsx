@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   handleErrorMessage,
   handleSuccessMessage,
-} from "../store/Slice/messageSlice";
+} from "../store/AllSlice/messageSlice";
 
 const OrderModal = ({ closeProductModal, getOrders, tempOrder }) => {
   const [isLoading, setIsLoading] = useState(false);

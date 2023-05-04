@@ -24,7 +24,7 @@ import {
   toastRemoveFromWish,
 } from "../../components/Toast";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleWishList } from "../../store/Slice/wishListSlice";
+import { toggleWishList } from "../../store/AllSlice/wishListSlice";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({});

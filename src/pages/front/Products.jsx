@@ -3,7 +3,7 @@ import axios from "axios";
 import Loading from "../../components/Loading";
 import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getTempPage } from "../../store/Slice/tempPageSlice";
+import { getTempPage } from "../../store/AllSlice/tempPageSlice";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

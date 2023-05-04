@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { numberWithCommas } from "../../function/function";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
-import { removeWishList } from "../../store/Slice/wishListSlice";
+import { removeWishList } from "../../store/AllSlice/wishListSlice";
 import {
   toastAddToCart,
   toastError,

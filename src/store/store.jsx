@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import messageSlice from "./messageSlice/messageSlice";
-import tempPageSlice from "./messageSlice/tempPageSlice";
-import wishListSlice from "./Slice/wishListSlice";
+
+import messageSlice from "./AllSlice/messageSlice";
+import tempPageSlice from "./AllSlice/tempPageSlice";
+import wishListSlice from "./AllSlice/wishListSlice";
 
 export const store = configureStore({
   reducer: {
