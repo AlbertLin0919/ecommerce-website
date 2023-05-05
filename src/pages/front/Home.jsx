@@ -3,7 +3,7 @@ import ProductCarousel from "../../components/front/ProductCarousel";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "../../components/Loading";
-
+import scrollImg from "../../images/scrollDown.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Autoplay } from "swiper";
 import { useForm } from "react-hook-form";
@@ -64,11 +64,7 @@ const Home = () => {
             zIndex: "-1",
           }}
         >
-          <img
-            src="https://o.remove.bg/downloads/6dffbd1a-1644-4515-b9ed-b1428574f2ae/scrollDown-removebg-preview.png"
-            alt="scrollDown"
-            className="scrollDown"
-          />
+          <img src={scrollImg} alt="scrollDown" className="scrollDown" />
         </div>
         <div
           className="container d-flex flex-column"

@@ -55,9 +55,9 @@ const Checkout = () => {
   //用來觀察使用者是否已選城市，根據使用者的城市顯示不同的區域
   const watchForm = useWatch({ control });
 
-  const twCity = axios.create({
-    baseURL: "",
-  });
+  // const twCity = axios.create({
+  //   baseURL: "",
+  // });
 
   const fetchCity = async () => {
     const res = await fetch(process.env.PUBLIC_URL + "/TwCities.json");

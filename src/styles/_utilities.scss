@@ -19,13 +19,14 @@ body {
 }
 
 //animation-text
+
 .text-animation {
   h1 {
     font-size: 100px;
     line-height: 160px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    background: url("../../public/images/back.png");
+    background: url("../images/back.png");
     background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
