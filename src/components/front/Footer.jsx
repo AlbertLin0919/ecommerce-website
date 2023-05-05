@@ -21,7 +21,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="text-white mx-3">
+              <Link
+                to="https://github.com/AlbertLin0919/ecommerce-website"
+                target="_blank"
+                className="text-white mx-3 gitHub"
+              >
                 <i className="bi bi-github"></i>
               </Link>
             </li>
