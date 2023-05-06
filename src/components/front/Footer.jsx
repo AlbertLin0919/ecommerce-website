@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-dark py-5">
+    <div className="bg-dark py-3">
       <div className="container">
         <div className="d-flex align-items-center justify-content-between text-white mb-md-7 mb-4">
           <Link className="text-white h4" to="/">
@@ -45,8 +45,22 @@ const Footer = () => {
             </Link>
           </div>
           <p className="mb-0">© 2023 PHONE All Rights Reserved.</p>
-
-          <p className="mb-0">此網頁為學習使用，不做任何商業用途</p>
+          <>
+            <p className="mb-0">
+              {" "}
+              <p className="mb-0">
+                圖片出處於
+                <Link
+                  to="https://www.toyselect.me/"
+                  target="_blank"
+                  className="text-light"
+                >
+                  toyselect
+                </Link>
+              </p>
+              此網頁為學習使用，不做任何商業用途。
+            </p>
+          </>
         </div>
       </div>
     </div>
