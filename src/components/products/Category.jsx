@@ -1,6 +1,5 @@
-import React from "react";
-import Product from "../../pages/front/Product";
 import Pagination from "../Pagination";
+import Product from "../Product";
 
 const Category = ({ title, products, getProducts, pagination, category }) => {
   return (

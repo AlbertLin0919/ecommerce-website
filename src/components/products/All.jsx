@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Product from "../../pages/front/Product";
+import Product from "../Product";
 import Pagination from "../Pagination";
 import { useOutletContext } from "react-router-dom";
 
