@@ -3,7 +3,7 @@ import { Link, useOutletContext, useNavigate } from "react-router-dom";
 import { useForm, useWatch } from "react-hook-form";
 import { Input } from "../../components/FormElement";
 import axios from "axios";
-import { numberWithCommas } from "../../function/function";
+import { numberWithCommas } from "../../untils";
 import OrderProgress from "../../components/OrderProgress";
 import Loading from "../../components/Loading";
 

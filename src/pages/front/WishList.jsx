@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { numberWithCommas } from "../../function/function";
+import { numberWithCommas } from "../../untils";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { removeWishList } from "../../store/AllSlice/wishListSlice";
 import {

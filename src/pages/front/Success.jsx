@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useOutletContext, useParams } from "react-router-dom";
-import { numberWithCommas } from "../../function/function";
 import OrderProgress from "../../components/OrderProgress";
+import { numberWithCommas } from "../../untils";
 
 const Success = () => {
   const { orderId } = useParams();

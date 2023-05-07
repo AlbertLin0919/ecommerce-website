@@ -6,8 +6,7 @@ import {
   useOutletContext,
   useParams,
 } from "react-router-dom";
-
-import { numberWithCommas } from "../../function/function";
+import { numberWithCommas } from "../../untils";
 import Loading from "../../components/Loading";
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";

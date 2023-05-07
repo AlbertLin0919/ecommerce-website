@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { numberWithCommas } from "../../function/function";
+import { numberWithCommas } from "../../untils";
 import OrderProgress from "../../components/OrderProgress";
 import Loading from "../../components/Loading";
 import axios from "axios";
