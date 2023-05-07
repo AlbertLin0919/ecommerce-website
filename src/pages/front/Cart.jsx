@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 import { Link, useOutletContext } from "react-router-dom";
+
 import { numberWithCommas } from "../../untils";
 import OrderProgress from "../../components/OrderProgress";
 import Loading from "../../components/Loading";
-import axios from "axios";
 import { toastDeleteItem, toastUpdateQty } from "../../components/Toast";
 
 const Cart = () => {

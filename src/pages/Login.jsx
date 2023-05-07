@@ -1,6 +1,7 @@
+import { useRef, useState } from "react";
 import axios from "axios";
-import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Nav from "../components/front/Nav";
 import Loading from "../components/Loading";
 

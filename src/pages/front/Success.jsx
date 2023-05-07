@@ -1,6 +1,7 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useOutletContext, useParams } from "react-router-dom";
+import axios from "axios";
+
 import OrderProgress from "../../components/OrderProgress";
 import { numberWithCommas } from "../../untils";
 

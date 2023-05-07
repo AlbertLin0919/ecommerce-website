@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import OrderModal from "../../components/OrderModal";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Modal } from "bootstrap";
+
+import OrderModal from "../../components/OrderModal";
 import Pagination from "../../components/Pagination";
 
 const AdminOrders = () => {

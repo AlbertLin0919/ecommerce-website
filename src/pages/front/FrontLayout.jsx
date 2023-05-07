@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import axios from "axios";
+
 import Nav from "../../components/front/Nav";
 import Footer from "../../components/front/Footer";
 import Message from "../../components/Message";
-import axios from "axios";
 
 //toast
 import { ToastContainer } from "react-toastify";

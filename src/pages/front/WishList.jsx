@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { numberWithCommas } from "../../untils";
+import { useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+
+import { numberWithCommas } from "../../untils";
 import { removeWishList } from "../../store/AllSlice/wishListSlice";
 import {
   toastAddToCart,
   toastError,
   toastRemoveFromWish,
 } from "../../components/Toast";
-import axios from "axios";
 import Loading from "../../components/Loading";
 
 const WishList = () => {

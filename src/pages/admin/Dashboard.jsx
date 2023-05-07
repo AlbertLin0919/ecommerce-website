@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { Outlet, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import React, { useEffect } from "react";
 
 import Message from "../../components/Message";
 

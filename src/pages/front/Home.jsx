@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
-import ProductCarousel from "../../components/front/ProductCarousel";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+import { FreeMode, Navigation, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import AOS from "aos";
+
+import ProductCarousel from "../../components/front/ProductCarousel";
 import Loading from "../../components/Loading";
 import scrollImg from "../../images/scrollDown.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Autoplay } from "swiper";
-import { useForm } from "react-hook-form";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Home = () => {

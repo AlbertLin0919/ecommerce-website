@@ -1,29 +1,29 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Link,
   useNavigate,
   useOutletContext,
   useParams,
 } from "react-router-dom";
+import { Thumbs, Navigation, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { numberWithCommas } from "../../untils";
 import Loading from "../../components/Loading";
-//swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs, Navigation, Autoplay } from "swiper";
-
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/navigation";
-import "swiper/css/free-mode";
 import {
   toastAddToCart,
   toastAddToWish,
   toastError,
   toastRemoveFromWish,
 } from "../../components/Toast";
-import { useDispatch, useSelector } from "react-redux";
 import { toggleWishList } from "../../store/AllSlice/wishListSlice";
+
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({});

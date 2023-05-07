@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import Loading from "../../components/Loading";
-import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink, Outlet } from "react-router-dom";
+
+import Loading from "../../components/Loading";
 import { getTempPage } from "../../store/AllSlice/tempPageSlice";
 
 const Products = () => {

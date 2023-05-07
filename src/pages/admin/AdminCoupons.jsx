@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { Modal } from "bootstrap";
+
 import CouponModal from "../../components/CouponModal";
 import DeleteModal from "../../components/DeleteModal";
-import { Modal } from "bootstrap";
 import Pagination from "../../components/Pagination";
 
 const AdminCoupons = () => {
