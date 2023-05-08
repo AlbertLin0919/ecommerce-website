@@ -8,7 +8,7 @@ import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+// import { ReactQueryDevtools } from "react-query/devtools";
 
 const queryClient = new QueryClient();
 
