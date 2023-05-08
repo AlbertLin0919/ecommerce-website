@@ -7,6 +7,10 @@ import axios from "axios";
 import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
@@ -15,7 +19,10 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Provider store={store}>
-        <App />
+        <QueryClientProvider client={queryClient}>
+          <App />
+          <ReactQueryDevtools />
+        </QueryClientProvider>
       </Provider>
     </HashRouter>
   </React.StrictMode>

@@ -47,7 +47,7 @@ const Footer = () => {
           <>
             <p className="mb-0">
               {" "}
-              <p className="mb-0">
+              <span className="mb-0 d-block">
                 圖片出處於
                 <Link
                   to="https://www.toyselect.me/"
@@ -56,7 +56,7 @@ const Footer = () => {
                 >
                   toyselect
                 </Link>
-              </p>
+              </span>
               此網頁為學習使用，不做任何商業用途。
             </p>
           </>

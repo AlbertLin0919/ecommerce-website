@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { FreeMode, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AOS from "aos";
+import { useQuery } from "react-query";
 
 import ProductCarousel from "../../components/front/ProductCarousel";
 import Loading from "../../components/Loading";
@@ -12,25 +13,19 @@ import scrollImg from "../../images/scrollDown.png";
 import "aos/dist/aos.css";
 
 const Home = () => {
-  const [lastest, setLastest] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const getProducts = async () => {
-    setIsLoading(true);
-    try {
-      const productRes = await axios.get(
-        `/v2/api/${process.env.REACT_APP_API_PATH}/products/all`
-      );
-      setLastest(productRes.data.products.slice(-7));
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-      setIsLoading(false);
-    }
+  const getLastestProducts = async () => {
+    const productRes = await axios.get(
+      `/v2/api/${process.env.REACT_APP_API_PATH}/products/all`
+    );
+    return productRes.data.products.slice(-7);
   };
 
+  const { data, isLoading } = useQuery("getLastest", getLastestProducts, {
+    refetchOnWindowFocus: false,
+    cacheTime: 1000,
+  });
+
   useEffect(() => {
-    getProducts();
     AOS.init({ duration: 2000, delay: 600, once: true, offset: 0 });
   }, []);
 
@@ -119,7 +114,7 @@ const Home = () => {
               },
             }}
           >
-            {lastest.map((product) => {
+            {data?.map((product) => {
               return (
                 <SwiperSlide key={product.id}>
                   <Link

@@ -11,7 +11,7 @@ const Category = ({ title, products, getProducts, pagination, category }) => {
             return <Product product={product} key={product.id} />;
           })}
         </div>
-        <nav className="d-flex justify-content-center">
+        <nav className="d-flex justify-content-center mt-5">
           <Pagination
             pagination={pagination}
             changePage={getProducts}
