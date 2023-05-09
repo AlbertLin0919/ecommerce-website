@@ -4,6 +4,7 @@ import { Modal } from "bootstrap";
 
 import OrderModal from "../../components/OrderModal";
 import Pagination from "../../components/Pagination";
+import DeleteModal from "../../components/DeleteModal";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -13,10 +14,13 @@ const AdminOrders = () => {
   const [tempOrder, setTempOrder] = useState({});
 
   const orderModal = useRef(null);
+  const deleteModal = useRef(null);
+
   useEffect(() => {
     orderModal.current = new Modal("#orderModal", {
       backdrop: "static",
     });
+    deleteModal.current = new Modal("#deleteModal");
 
     getOrders();
   }, []);
@@ -25,7 +29,6 @@ const AdminOrders = () => {
     const res = await axios.get(
       `/v2/api/${process.env.REACT_APP_API_PATH}/admin/orders?page=${page}`
     );
-    console.log(res);
     setOrders(res.data.orders);
     setPagination(res.data.pagination);
   };
@@ -38,12 +41,42 @@ const AdminOrders = () => {
     setTempOrder({});
     orderModal.current.hide();
   };
+
+  const openDeleteModal = (order) => {
+    setTempOrder(order);
+    deleteModal.current.show();
+  };
+
+  const closeDeleteModal = () => {
+    deleteModal.current.hide();
+  };
+
+  const deleteOrder = async (id) => {
+    try {
+      const res = await axios.delete(
+        `v2/api/${process.env.REACT_APP_API_PATH}/admin/order/${id}`
+      );
+      if (res.data.success) {
+        getOrders();
+        deleteModal.current.hide();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="p-3">
       <OrderModal
         closeProductModal={closeOrderModal}
         getOrders={getOrders}
         tempOrder={tempOrder}
+      />
+      <DeleteModal
+        close={closeDeleteModal}
+        text={tempOrder.id}
+        handleDelete={deleteOrder}
+        id={tempOrder.id}
       />
       <h3>訂單列表</h3>
       <hr />
@@ -101,6 +134,13 @@ const AdminOrders = () => {
                     }}
                   >
                     查看
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger btn-sm ms-2"
+                    onClick={() => openDeleteModal(order)}
+                  >
+                    刪除
                   </button>
                 </td>
               </tr>
