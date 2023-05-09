@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import phoneFooter from "../../images/phone-footer.png";
 
 const Footer = () => {
   return (
     <div className="bg-dark py-3">
       <div className="container">
         <div className="d-flex align-items-center justify-content-between text-white mb-md-7 mb-4">
-          <Link className="text-white h4" to="/">
-            Phone
+          <Link className="text-white h4" to="/" style={{ width: "150px" }}>
+            <img src={phoneFooter} alt="phonefooter" className="w-100" />
           </Link>
           <ul className="d-flex list-unstyled mb-0 h4">
             <li>

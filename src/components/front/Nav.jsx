@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import phoneIcon from "../../images/phone.icon.png";
 
 const Nav = ({ cartData }) => {
   const { wishList } = useSelector((state) => state.wishList);
@@ -9,8 +10,8 @@ const Nav = ({ cartData }) => {
       <nav className="navbar-sticky shadow-sm bg-body-tertiary">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light">
-            <NavLink className="navbar-brand" to="/">
-              Phone
+            <NavLink className="navbar-brand" style={{ width: "200px" }} to="/">
+              <img src={phoneIcon} alt="phone" className="w-100" />
             </NavLink>
             <button
               className="navbar-toggler show"
